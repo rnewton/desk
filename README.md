@@ -1,7 +1,7 @@
 
 # ◲  desk
 
-[![build](https://api.travis-ci.org/jamesob/desk.svg)](https://travis-ci.org/jamesob/desk) [![Join the chat at https://gitter.im/jamesob/desk](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/jamesob/desk?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![build](https://api.travis-ci.org/jamesob/desk.svg?branch=master)](https://travis-ci.org/jamesob/desk) [![Join the chat at https://gitter.im/jamesob/desk](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/jamesob/desk?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 Lightweight workspace manager for the shell. 
 
@@ -21,7 +21,8 @@ But I often find myself working in multiple different code trees simultaneously:
 the quick context switches and namespaced commands that desk facilitates 
 have proven useful.
 
-There are no dependencies other than some kind of Unix shell.
+There are no dependencies other than `bash`. Desk is explicitly tested with `bash`,
+`zsh`, and `fish`.
 
 ```sh
 ◲  desk 0.1.2
@@ -119,9 +120,10 @@ and so shared across many computers.
 
 ### Using a non-default config location
 
-By default, desks live in `~/.desk/desks`. If you want to use some other location,
-specify as much in `desk init` and then ensure you set `$DESK_DIR` to match
-that location in your shell's rc file.
+By default, desk configuration lives in `~/.desk` (`$DESK_DIR`) and deskfiles
+live in `~/.desk/desks` (`$DESK_DESKS_DIR`). If you want to use some other
+location, specify as much in `desk init` and then ensure you set `$DESK_DIR`
+and/or `$DESK_DESKS_DIR` to match in your shell's rc file.
 
 ### Usage with OS X
 
@@ -138,3 +140,11 @@ if [ -f ~/.bashrc ]; then
    source ~/.bashrc
 fi
 ```
+
+### Tips accepted
+
+![18qMe1NG8maceraRv1ttY7tJgHYv2c8b5h](http://i.imgur.com/Faez4cr.png)
+
+BTC: `18qMe1NG8maceraRv1ttY7tJgHYv2c8b5h`
+
+Half of all tips will be donated to [an organization providing aid to Syrian refugees](http://www.moas.eu/).
