@@ -25,7 +25,7 @@ There are no dependencies other than `bash`. Desk is explicitly tested with `bas
 `zsh`, and `fish`.
 
 ```sh
-◲  desk 0.1.2
+◲  desk 0.3.1
 
 Usage:
 
@@ -38,6 +38,9 @@ Usage:
         List all desks along with a description.
     desk (.|go) desk-name
         Activate a desk.
+    desk edit [desk-name]
+        Edit (or create) a deskfile with the name specified, otherwise 
+        edit the active deskfile.
     desk help
         Show this text.
     desk version
@@ -96,10 +99,15 @@ rendering.
           
 ### Installing
 
-0. `git clone git@github.com:jamesob/desk.git && cd desk`
-0. `sudo make install` or `cp desk ~/bin/desk`
+0. `curl https://raw.githubusercontent.com/jamesob/desk/master/desk > ~/bin/desk`
+0. `less ~/bin/desk` to make sure you've downloaded what you think you've downloaded.
+0. `chmod +x ~/bin/desk`
 0. `desk init`
 0. Start adding deskfiles to your config directory, e.g. `~/.desk/desks/hacking_gibson.sh`
+
+Note that `~/bin` may not exist on your system, or may not be on your PATH. Feel free
+to substitute that for another directory, e.g. `/usr/local/bin`, and add `sudo` as 
+necessary.
 
 ### Deskfile rules
 
